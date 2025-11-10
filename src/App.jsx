@@ -12,6 +12,11 @@ function App() {
     <>
       <div>
         <h1>REACT BLOG</h1>
+        <form>
+          <input type="text" placeholder="Titolo articolo" value={newTitle} />
+          <button>Add</button>
+        </form>
+
         <ul>
           {articles.map((article) => (
             <li key={article.id}>{article.title}</li>
