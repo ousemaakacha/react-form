@@ -7,13 +7,23 @@ function App() {
     { id: 2, title: "Fantasy" },
     { id: 3, title: "Thriller" },
   ];
+  const [newTitle, setNewTitle] = useState("");
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   const [articles, setArticles] = useState(art);
   return (
     <>
       <div>
         <h1>REACT BLOG</h1>
-        <form>
-          <input type="text" placeholder="Titolo articolo" value={newTitle} />
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Titolo articolo"
+            value={newTitle}
+            onChange={(e) => setNewTitle(e.target.value)}
+          />
           <button>Add</button>
         </form>
 
