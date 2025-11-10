@@ -13,7 +13,9 @@ function App() {
       <div>
         <h1>REACT BLOG</h1>
         <ul>
-          <li></li>
+          {articles.map((article) => (
+            <li key={article.id}>{article.title}</li>
+          ))}
         </ul>
       </div>
     </>
