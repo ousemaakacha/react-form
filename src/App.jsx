@@ -10,6 +10,14 @@ function App() {
   const [newTitle, setNewTitle] = useState("");
   function handleSubmit(e) {
     e.preventDefault();
+
+    const newArticle = {
+      title: newTitle,
+    };
+
+    setArticles([...articles, newArticle]);
+
+    setNewTitle("");
   }
 
   const [articles, setArticles] = useState(art);
